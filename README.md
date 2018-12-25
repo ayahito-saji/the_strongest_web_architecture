@@ -1,3 +1,4 @@
+```
 $ rails -v
 Rails 5.1.4
 $ ruby -v
@@ -8,3 +9,4 @@ $ node -v
 v10.14.2
 $ npm -v
 6.4.1
+```
