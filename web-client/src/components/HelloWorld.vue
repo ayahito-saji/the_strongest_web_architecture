@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <button v-on:click="api_request">API Request</button>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -84,11 +85,21 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    api_request () {
+      axios.get("http://192.168.33.10:3000/v1/hoge/fuga")
+        .then(response => {
+          console.log(response)
+        })
     }
   }
 }
